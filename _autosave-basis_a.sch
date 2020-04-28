@@ -598,17 +598,6 @@ F 3 "~" H 7200 2810 50  0001 C CNN
 	1    7200 2550
 	1    0    0    -1  
 $EndComp
-$Comp
-L Device:Rotary_Encoder_Switch SW?
-U 1 1 5EA3FBAC
-P 7200 1800
-F 0 "SW?" H 7200 2167 50  0000 C CNN
-F 1 "Rotary_Encoder_Switch" H 7200 2076 50  0000 C CNN
-F 2 "" H 7050 1960 50  0001 C CNN
-F 3 "~" H 7200 2060 50  0001 C CNN
-	1    7200 1800
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8550 2100 7950 2100
 Connection ~ 8550 2100
@@ -1471,4 +1460,84 @@ Wire Wire Line
 Wire Wire Line
 	5850 1800 5850 2550
 Connection ~ 5850 2550
+$Comp
+L Device:Rotary_Encoder_Switch SW?
+U 1 1 5EA3FBAC
+P 7200 1800
+F 0 "SW?" H 7200 2167 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 7200 2076 50  0000 C CNN
+F 2 "" H 7050 1960 50  0001 C CNN
+F 3 "~" H 7200 2060 50  0001 C CNN
+	1    7200 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 1700 6800 1700
+Text GLabel 6800 1700 0    50   Input ~ 0
+ROT0A
+Wire Wire Line
+	6900 1900 6800 1900
+Wire Wire Line
+	6900 2450 6800 2450
+Wire Wire Line
+	6900 2650 6800 2650
+Wire Wire Line
+	6900 3200 6800 3200
+Wire Wire Line
+	6900 3400 6800 3400
+Text GLabel 6800 1900 0    50   Input ~ 0
+ROT0B
+Text GLabel 6800 2450 0    50   Input ~ 0
+ROT1A
+Text GLabel 6800 2650 0    50   Input ~ 0
+ROT1B
+Text GLabel 6800 3200 0    50   Input ~ 0
+ROT2A
+Text GLabel 6800 3400 0    50   Input ~ 0
+ROT2B
+$Comp
+L Connector:AudioJack4 J?
+U 1 1 5EBF56B0
+P 4400 850
+F 0 "J?" H 4357 1175 50  0000 C CNN
+F 1 "AudioJack4" H 4357 1084 50  0000 C CNN
+F 2 "" H 4400 850 50  0001 C CNN
+F 3 "~" H 4400 850 50  0001 C CNN
+	1    4400 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 750  5250 750 
+$Comp
+L power:GND #PWR?
+U 1 1 5EBFEEB2
+P 5250 750
+F 0 "#PWR?" H 5250 500 50  0001 C CNN
+F 1 "GND" H 5255 577 50  0000 C CNN
+F 2 "" H 5250 750 50  0001 C CNN
+F 3 "" H 5250 750 50  0001 C CNN
+	1    5250 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5EC07C71
+P 5050 1050
+F 0 "#PWR?" H 5050 900 50  0001 C CNN
+F 1 "+5V" H 5065 1223 50  0000 C CNN
+F 2 "" H 5050 1050 50  0001 C CNN
+F 3 "" H 5050 1050 50  0001 C CNN
+	1    5050 1050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 1050 5050 1050
+Wire Wire Line
+	4600 850  4650 850 
+Text GLabel 4650 850  2    50   Input ~ 0
+TRRS0
+Wire Wire Line
+	4600 950  4650 950 
+Text GLabel 4650 950  2    50   Input ~ 0
+TRRS1
 $EndSCHEMATC
