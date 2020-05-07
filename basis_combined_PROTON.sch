@@ -1097,9 +1097,9 @@ F 3 "" H 3450 1400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 8850 5850 2    50   Input ~ 0
-TRRS1_r
+TRRS1
 Text GLabel 8850 5750 2    50   Input ~ 0
-TRRS0_r
+TRRS0
 Wire Wire Line
 	8050 5750 8550 5750
 $Comp
@@ -2290,9 +2290,9 @@ ROW6
 Text GLabel 11350 10500 2    50   Input ~ 0
 ROW5
 Text GLabel 11450 8900 2    50   Input ~ 0
-TRRS1_r
+TRRS1
 Text GLabel 11450 8800 2    50   Input ~ 0
-TRRS0_r
+TRRS0
 $Comp
 L power:+5V #PWR0105
 U 1 1 5ED995C3
@@ -3417,10 +3417,10 @@ Wire Wire Line
 	8750 6850 8550 6850
 Connection ~ 8550 6850
 $Comp
-L Connector:USB_B_Micro J?
+L Connector:USB_B_Micro J2
 U 1 1 6171A6A9
 P 7750 5750
-F 0 "J?" H 7807 6217 50  0000 C CNN
+F 0 "J2" H 7807 6217 50  0000 C CNN
 F 1 "USB_B_Micro" H 7807 6126 50  0000 C CNN
 F 2 "Connector_USB:USB_Micro-B_Molex_47346-0001" H 7900 5700 50  0001 C CNN
 F 3 "~" H 7900 5700 50  0001 C CNN
@@ -3428,10 +3428,10 @@ F 3 "~" H 7900 5700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:USB_B_Micro J?
+L Connector:USB_B_Micro J1
 U 1 1 6171CFCD
 P 3450 1000
-F 0 "J?" H 3507 1467 50  0000 C CNN
+F 0 "J1" H 3507 1467 50  0000 C CNN
 F 1 "USB_B_Micro" H 3507 1376 50  0000 C CNN
 F 2 "Connector_USB:USB_Micro-B_Molex_47346-0001" H 3600 950 50  0001 C CNN
 F 3 "~" H 3600 950 50  0001 C CNN
