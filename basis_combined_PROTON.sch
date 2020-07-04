@@ -964,12 +964,12 @@ ROW5
 $Comp
 L Device:Polyfuse_Small F1
 U 1 1 5F2E04FA
-P 13300 1000
-F 0 "F1" V 13095 1000 50  0000 C CNN
-F 1 "500mA" V 13186 1000 50  0000 C CNN
-F 2 "Fuse:Fuse_1206_3216Metric" H 13350 800 50  0001 L CNN
-F 3 "~" H 13300 1000 50  0001 C CNN
-	1    13300 1000
+P 13500 7550
+F 0 "F1" V 13295 7550 50  0000 C CNN
+F 1 "500mA" V 13386 7550 50  0000 C CNN
+F 2 "Fuse:Fuse_1206_3216Metric" H 13550 7350 50  0001 L CNN
+F 3 "~" H 13500 7550 50  0001 C CNN
+	1    13500 7550
 	0    1    1    0   
 $EndComp
 Text GLabel 1100 4150 0    50   Input ~ 0
@@ -977,16 +977,16 @@ LED3v
 $Comp
 L Device:Polyfuse_Small F2
 U 1 1 5F66D4D9
-P 13500 7550
-F 0 "F2" V 13295 7550 50  0000 C CNN
-F 1 "500mA" V 13386 7550 50  0000 C CNN
-F 2 "Fuse:Fuse_1206_3216Metric" H 13550 7350 50  0001 L CNN
-F 3 "~" H 13500 7550 50  0001 C CNN
-	1    13500 7550
+P 13300 1000
+F 0 "F2" V 13095 1000 50  0000 C CNN
+F 1 "500mA" V 13186 1000 50  0000 C CNN
+F 2 "Fuse:Fuse_1206_3216Metric" H 13350 800 50  0001 L CNN
+F 3 "~" H 13300 1000 50  0001 C CNN
+	1    13300 1000
 	0    1    1    0   
 $EndComp
 Text GLabel 8050 9350 0    50   Input ~ 0
-LED3v3
+R_LED3v3
 Text GLabel 8150 8950 0    50   Input ~ 0
 COL13
 Wire Wire Line
@@ -1088,8 +1088,6 @@ F 3 "" H 10900 1650 60  0001 C CNN
 	1    10900 1650
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	12500 1000 13000 1000
 $Comp
 L power:+5V #PWR0116
 U 1 1 612CE5B3
@@ -1103,24 +1101,10 @@ F 3 "" H 13550 1000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	13400 1000 13550 1000
-$Comp
-L power:VCC #PWR0117
-U 1 1 612CF0B3
-P 13000 1000
-F 0 "#PWR0117" H 13000 850 50  0001 C CNN
-F 1 "VCC" H 13017 1173 50  0000 C CNN
-F 2 "" H 13000 1000 50  0001 C CNN
-F 3 "" H 13000 1000 50  0001 C CNN
-	1    13000 1000
-	1    0    0    -1  
-$EndComp
-Connection ~ 13000 1000
-Wire Wire Line
-	13000 1000 13200 1000
 Text GLabel 14150 1350 2    50   Input ~ 0
-D-
+R_D-
 Text GLabel 14150 2350 2    50   Input ~ 0
-D+
+R_D+
 $Comp
 L power:GND #PWR0136
 U 1 1 612F82C0
@@ -1157,9 +1141,9 @@ F 3 "" H 13200 7550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 13900 7950 2    50   Input ~ 0
-D-
+L_D-
 Text GLabel 13900 8950 2    50   Input ~ 0
-D+
+L_D+
 $Comp
 L power:GND #PWR0139
 U 1 1 61308979
@@ -2297,9 +2281,9 @@ F 3 "" H 1700 1850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 2650 4450 2    50   Input ~ 0
-D-
+L_D-
 Text GLabel 2650 4550 2    50   Input ~ 0
-D+
+L_D+
 Wire Wire Line
 	2500 4450 2650 4450
 Wire Wire Line
@@ -2805,9 +2789,9 @@ F 3 "" H 8650 7050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 9600 9650 2    50   Input ~ 0
-D-
+R_D-
 Text GLabel 9600 9750 2    50   Input ~ 0
-D+
+R_D+
 Wire Wire Line
 	9450 9650 9600 9650
 Wire Wire Line
@@ -2817,9 +2801,9 @@ Wire Wire Line
 Wire Wire Line
 	9450 9050 9600 9050
 Text GLabel 9600 9050 2    50   Input ~ 0
-SPKR2
+R_SPKR2
 Text GLabel 8700 5850 0    50   Input ~ 0
-LED3v3
+R_LED3v3
 $Comp
 L Regulator_Linear:XC6206PxxxMR U2
 U 1 1 65828510
@@ -3026,15 +3010,15 @@ usart1
 Wire Wire Line
 	9450 8750 9600 8750
 Text GLabel 9600 8750 2    50   Input ~ 0
-USART2_TX
+R_USART2_TX
 Wire Wire Line
 	9450 9850 9550 9850
 Text GLabel 9550 9850 2    50   Input ~ 0
-SWDIO
+R_SWDIO
 Wire Wire Line
 	9450 9950 9550 9950
 Text GLabel 9550 9950 2    50   Input ~ 0
-SWCLK
+R_SWCLK
 Wire Wire Line
 	7100 9650 7100 9950
 $Comp
@@ -3060,7 +3044,7 @@ F 3 "" H 10900 5950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 10900 5850 2    50   Input ~ 0
-LED5V
+R_LED5V
 $Comp
 L SN74LVC1G07DCKR:SN74LVC1G07DCK3 U8
 U 1 1 65C1F853
@@ -3173,7 +3157,7 @@ Wire Wire Line
 Wire Wire Line
 	11200 10350 11250 10350
 Text GLabel 11250 10350 2    50   Input ~ 0
-NRST
+R_NRST
 $Comp
 L power:GND #PWR0130
 U 1 1 662687E1
@@ -3200,7 +3184,7 @@ Connection ~ 10350 10150
 Wire Wire Line
 	11200 10050 11250 10050
 Text GLabel 11250 10050 2    50   Input ~ 0
-SWCLK
+R_SWCLK
 $Comp
 L FTSH-105-01-L-DV-K:FTSH-105-01-L-DV-K J7
 U 1 1 662687F6
@@ -3217,7 +3201,7 @@ $EndComp
 Wire Wire Line
 	11200 9950 11250 9950
 Text GLabel 11250 9950 2    50   Input ~ 0
-SWDIO
+R_SWDIO
 Wire Wire Line
 	10400 9950 10350 9950
 $Comp
@@ -3576,7 +3560,7 @@ Connection ~ 1550 12050
 Wire Wire Line
 	1250 11750 1100 11750
 Text GLabel 1100 11750 0    50   Input ~ 0
-LED5V
+R_LED5V
 Wire Wire Line
 	1850 11750 2200 11750
 $Comp
@@ -3817,38 +3801,27 @@ $EndComp
 $Comp
 L Power_Protection:USBLC6-2SC6 U11
 U 1 1 66C253CB
-P 13450 1850
-F 0 "U11" H 13450 2531 50  0000 C CNN
-F 1 "USBLC6-2SC6" H 13450 2440 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-666" H 12700 2250 50  0001 C CNN
-F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 13650 2200 50  0001 C CNN
-	1    13450 1850
-	0    1    1    0   
-$EndComp
-$Comp
-L Power_Protection:USBLC6-2SC6 U12
-U 1 1 66C2D08D
 P 13500 8450
-F 0 "U12" H 13500 9131 50  0000 C CNN
+F 0 "U11" H 13500 9131 50  0000 C CNN
 F 1 "USBLC6-2SC6" H 13500 9040 50  0000 C CNN
 F 2 "Package_TO_SOT_SMD:SOT-666" H 12750 8850 50  0001 C CNN
 F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 13700 8800 50  0001 C CNN
 	1    13500 8450
 	0    1    1    0   
 $EndComp
+$Comp
+L Power_Protection:USBLC6-2SC6 U12
+U 1 1 66C2D08D
+P 13450 1850
+F 0 "U12" H 13450 2531 50  0000 C CNN
+F 1 "USBLC6-2SC6" H 13450 2440 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-666" H 12700 2250 50  0001 C CNN
+F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 13650 2200 50  0001 C CNN
+	1    13450 1850
+	0    1    1    0   
+$EndComp
 Wire Wire Line
 	12950 7950 13400 7950
-$Comp
-L power:VCC #PWR0125
-U 1 1 673C13A2
-P 14650 1850
-F 0 "#PWR0125" H 14650 1700 50  0001 C CNN
-F 1 "VCC" H 14667 2023 50  0000 C CNN
-F 2 "" H 14650 1850 50  0001 C CNN
-F 3 "" H 14650 1850 50  0001 C CNN
-	1    14650 1850
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:VCC #PWR0133
 U 1 1 67498326
@@ -4298,17 +4271,17 @@ $EndComp
 Wire Wire Line
 	9450 8650 9600 8650
 Text GLabel 9600 8650 2    50   Input ~ 0
-USART2_RTS
+R_USART2_RTS
 Wire Wire Line
 	9450 8550 9600 8550
 Text GLabel 9600 8550 2    50   Input ~ 0
-USART2_CTS
+R_USART2_CTS
 Wire Wire Line
 	9450 8850 9600 8850
 Text GLabel 9600 8850 2    50   Input ~ 0
-USART2_RX
+R_USART2_RX
 Text GLabel 9600 8950 2    50   Input ~ 0
-USART2_CK
+R_USART2_CK
 Wire Wire Line
 	9700 11500 9800 11500
 Wire Wire Line
@@ -4316,15 +4289,15 @@ Wire Wire Line
 Wire Wire Line
 	9700 11100 9800 11100
 Text GLabel 9800 11100 2    50   Input ~ 0
-USART2_CTS
+R_USART2_CTS
 Text GLabel 9700 12150 2    50   Input ~ 0
-USART2_TX
+R_USART2_TX
 Text GLabel 9700 11850 2    50   Input ~ 0
-USART2_RX
+R_USART2_RX
 Wire Wire Line
 	9700 11700 9800 11700
 Text GLabel 9700 11200 2    50   Input ~ 0
-USART2_RTS
+R_USART2_RTS
 $Comp
 L Amplifier_Audio:LM386 U3
 U 1 1 5FC4C7E5
@@ -4556,7 +4529,7 @@ $EndComp
 Wire Wire Line
 	5600 5800 5400 5800
 Text GLabel 5400 5800 0    50   Input ~ 0
-SPKR2
+R_SPKR2
 $Comp
 L power:GND #PWR0160
 U 1 1 6079CA1B
@@ -4648,11 +4621,11 @@ $EndComp
 Wire Wire Line
 	9700 11950 10200 11950
 Text GLabel 10200 11950 2    50   Input ~ 0
-SWCLK
+R_BT_SWCLK
 Wire Wire Line
 	9700 12050 10200 12050
 Text GLabel 10200 12050 2    50   Input ~ 0
-SWDIO
+R_BT_SWDIO
 $Comp
 L power:GND #PWR0163
 U 1 1 60B81E93
@@ -4679,7 +4652,7 @@ Connection ~ 7150 10900
 Wire Wire Line
 	8000 10800 8050 10800
 Text GLabel 8050 10800 2    50   Input ~ 0
-SWCLK
+R_BT_SWCLK
 $Comp
 L FTSH-105-01-L-DV-K:FTSH-105-01-L-DV-K J6
 U 1 1 60B81EA8
@@ -4696,7 +4669,7 @@ $EndComp
 Wire Wire Line
 	8000 10700 8050 10700
 Text GLabel 8050 10700 2    50   Input ~ 0
-SWDIO
+R_BT_SWDIO
 Wire Wire Line
 	7100 10700 7200 10700
 Wire Wire Line
@@ -4746,7 +4719,7 @@ Wire Wire Line
 Wire Wire Line
 	8500 11850 8400 11850
 Text GLabel 8400 11850 0    50   Input ~ 0
-USART2_CK
+R_USART2_CK
 $Comp
 L power:+3.3V #PWR0167
 U 1 1 6160F7CD
@@ -4759,11 +4732,11 @@ F 3 "" H 10350 9950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 8150 7250 2    50   Input ~ 0
-NRST
+R_NRST
 Wire Wire Line
 	8150 7450 8100 7450
 Text GLabel 8100 7450 0    50   Input ~ 0
-NRST
+R_NRST
 Connection ~ 8950 7250
 Connection ~ 8850 7250
 Wire Wire Line
@@ -4860,7 +4833,7 @@ Connection ~ -2850 5950
 Wire Wire Line
 	-2000 5850 -1950 5850
 Text GLabel -1950 5850 2    50   Input ~ 0
-SWCLK
+L_BT_SWCLK
 $Comp
 L FTSH-105-01-L-DV-K:FTSH-105-01-L-DV-K J8
 U 1 1 621CC05C
@@ -4877,7 +4850,7 @@ $EndComp
 Wire Wire Line
 	-2000 5750 -1950 5750
 Text GLabel -1950 5750 2    50   Input ~ 0
-SWDIO
+L_BT_SWDIO
 Wire Wire Line
 	-2900 5750 -2800 5750
 $Comp
@@ -4914,11 +4887,11 @@ Wire Wire Line
 Wire Wire Line
 	-300 7000 200  7000
 Text GLabel 200  7000 2    50   Input ~ 0
-SWCLK
+L_BT_SWCLK
 Wire Wire Line
 	-300 7100 200  7100
 Text GLabel 200  7100 2    50   Input ~ 0
-SWDIO
+L_BT_SWDIO
 Text GLabel -200 6750 2    50   Input ~ 0
 USART2_RTS
 Text GLabel -1550 6900 0    50   Input ~ 0
@@ -5226,45 +5199,45 @@ Connection ~ 12350 8350
 Wire Wire Line
 	13600 8950 13900 8950
 Text GLabel 13100 7950 1    50   Input ~ 0
-D-
+L_D-RAW
 Text GLabel 13050 8950 3    50   Input ~ 0
-D+
+L_D+RAW
 Text GLabel 13100 1350 1    50   Input ~ 0
-D-
+R_D-RAW
 Text GLabel 13050 2350 3    50   Input ~ 0
-D+
+R_D+RAW
 $Comp
 L Device:C_Small C49
 U 1 1 6544880F
-P 14350 1950
-F 0 "C49" H 14442 1996 50  0000 L CNN
-F 1 "100nF" H 14442 1905 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 14350 1950 50  0001 C CNN
-F 3 "~" H 14350 1950 50  0001 C CNN
-	1    14350 1950
+P 14350 8550
+F 0 "C49" H 14442 8596 50  0000 L CNN
+F 1 "100nF" H 14442 8505 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 14350 8550 50  0001 C CNN
+F 3 "~" H 14350 8550 50  0001 C CNN
+	1    14350 8550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	13950 1850 14350 1850
+	13950 1850 14250 1850
 Connection ~ 14350 1850
 Wire Wire Line
 	14350 1850 14650 1850
 Wire Wire Line
 	12950 1850 12950 2050
 Wire Wire Line
-	12950 2050 14350 2050
+	12950 2050 14250 2050
 Connection ~ 14350 2050
 Wire Wire Line
 	14350 2050 14650 2050
 $Comp
 L Device:C_Small C50
 U 1 1 6554BD4E
-P 14350 8550
-F 0 "C50" H 14442 8596 50  0000 L CNN
-F 1 "100nF" H 14442 8505 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0402_1005Metric" H 14350 8550 50  0001 C CNN
-F 3 "~" H 14350 8550 50  0001 C CNN
-	1    14350 8550
+P 14250 1950
+F 0 "C50" H 14342 1996 50  0000 L CNN
+F 1 "100nF" H 14342 1905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 14250 1950 50  0001 C CNN
+F 3 "~" H 14250 1950 50  0001 C CNN
+	1    14250 1950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -5280,10 +5253,10 @@ Connection ~ 14350 8650
 Wire Wire Line
 	14350 8650 14650 8650
 $Comp
-L power:GNDS #PWR?
+L power:GNDS #PWR0182
 U 1 1 65697079
 P 10500 1100
-F 0 "#PWR?" H 10500 850 50  0001 C CNN
+F 0 "#PWR0182" H 10500 850 50  0001 C CNN
 F 1 "GNDS" V 10505 972 50  0000 R CNN
 F 2 "" H 10500 1100 50  0001 C CNN
 F 3 "" H 10500 1100 50  0001 C CNN
@@ -5291,14 +5264,47 @@ F 3 "" H 10500 1100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GNDS #PWR?
+L power:GNDS #PWR0183
 U 1 1 656976B2
 P 11150 1650
-F 0 "#PWR?" H 11150 1400 50  0001 C CNN
+F 0 "#PWR0183" H 11150 1400 50  0001 C CNN
 F 1 "GNDS" V 11155 1522 50  0000 R CNN
 F 2 "" H 11150 1650 50  0001 C CNN
 F 3 "" H 11150 1650 50  0001 C CNN
 	1    11150 1650
 	0    -1   -1   0   
 $EndComp
+$Comp
+L power:VCCQ #PWR0117
+U 1 1 6578B369
+P 12900 1000
+F 0 "#PWR0117" H 12900 850 50  0001 C CNN
+F 1 "VCCQ" H 12917 1173 50  0000 C CNN
+F 2 "" H 12900 1000 50  0001 C CNN
+F 3 "" H 12900 1000 50  0001 C CNN
+	1    12900 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12500 1000 12900 1000
+Connection ~ 12900 1000
+Wire Wire Line
+	12900 1000 13200 1000
+$Comp
+L power:VCCQ #PWR0125
+U 1 1 6591E530
+P 14650 1850
+F 0 "#PWR0125" H 14650 1700 50  0001 C CNN
+F 1 "VCCQ" H 14667 2023 50  0000 C CNN
+F 2 "" H 14650 1850 50  0001 C CNN
+F 3 "" H 14650 1850 50  0001 C CNN
+	1    14650 1850
+	1    0    0    -1  
+$EndComp
+Connection ~ 14250 1850
+Wire Wire Line
+	14250 1850 14350 1850
+Connection ~ 14250 2050
+Wire Wire Line
+	14250 2050 14350 2050
 $EndSCHEMATC
